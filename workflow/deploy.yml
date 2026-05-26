@@ -2,7 +2,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ['main'] # або 'master', залежно від назви вашої основної гілки
+    branches: ['main']
 
 permissions:
   contents: read
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: './my-shop/package-lock.json' # вкажіть шлях до вашого package-lock.json
+          cache-dependency-path: './package-lock.json'
       - name: Install dependencies
         run: cd my-shop && npm ci
       - name: Build
@@ -37,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './my-shop/dist' # Vite за замовчуванням збирає файли у папку dist
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
