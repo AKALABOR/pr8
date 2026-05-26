@@ -29,9 +29,9 @@ jobs:
           cache: 'npm'
           cache-dependency-path: './package-lock.json'
       - name: Install dependencies
-        run: cd my-shop && npm ci
+        run: npm ci
       - name: Build
-        run: cd my-shop && npm run build
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
