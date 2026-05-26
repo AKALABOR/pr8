@@ -1,0 +1,45 @@
+.product {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+  color: #333;
+}
+
+.product:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.product img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.product h2 {
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+}
+
+.product p {
+  margin: 0 0 16px 0;
+  color: #555;
+}
+
+.product button {
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.purchase-count {
+    margin: 10px 0 0 0 !important;
+    font-weight: bold;
+    color: #28a745 !important;
+}
