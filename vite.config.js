@@ -6,7 +6,7 @@ import babel from '@rolldown/plugin-babel'
 export default defineConfig({
   base: '/pr8/',
   plugins: [
-    react(),
     babel({ presets: [reactCompilerPreset()] })
+    react(),
   ],
 })
