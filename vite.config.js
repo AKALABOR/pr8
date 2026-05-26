@@ -7,6 +7,6 @@ export default defineConfig({
   base: '/pr8/',
   plugins: [
     babel({ presets: [reactCompilerPreset()] })
-    react(),
+    react(), 
   ],
 })
